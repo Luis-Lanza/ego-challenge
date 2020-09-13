@@ -7,8 +7,10 @@ Challenge inspired in an AUTO-MODELS-INSPIRED responsive web single-page-applica
 ## Instructions
 To run the project:
 
-Clone this repo
-Run npm install
-Run npm start
+<ol> 
+<li>Clone this repo</li>
+<li>Run npm install</li>
+<li>Run npm start</li>
+</ol>
 
-
+## Components Structure
