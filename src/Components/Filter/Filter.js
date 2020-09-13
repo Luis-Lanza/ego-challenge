@@ -5,7 +5,7 @@ import './Filter.css';
 
 const Filter = () => {
     return (
-        <div>
+        <div className='Text-Style-4'>
             <p>Filtrar por</p>
         </div>
     );

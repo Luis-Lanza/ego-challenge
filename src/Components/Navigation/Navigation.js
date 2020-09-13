@@ -7,13 +7,13 @@ import './Navigation.css';
 
 const Navigation = () => {
     return (
-        <nav className='Bar' style={{display: 'flex', justifyContent: 'space-evenly'}}>
+        <nav className='Bar Text-Style-4' style={{display: 'flex', justifyContent: 'space-evenly'}}>
             <img 
                 src={Ego} 
                 alt='ego-logo' 
                 style={{alignSelf: 'flex-start'}} 
             />
-            <p>Home</p>
+            <p>Modelos</p>
             <p>Ficha de Modelo</p>
             <Menu />
         </nav>

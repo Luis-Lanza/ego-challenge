@@ -5,7 +5,7 @@ import './Order.css';
 
 const Order = () => {
     return (
-        <div>
+        <div className='Text-Style-4'>
             <p>Ordenar por</p>
         </div>
     );
