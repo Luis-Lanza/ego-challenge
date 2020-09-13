@@ -14,7 +14,7 @@ const Navigation = () => {
                 style={{alignSelf: 'flex-start'}} 
             />
             <p>Home</p>
-            <p>Ficha Técnica</p>
+            <p>Ficha de Modelo</p>
             <Menu />
         </nav>
     );
