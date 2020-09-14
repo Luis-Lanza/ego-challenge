@@ -7,19 +7,17 @@ import './CardList.css';
 const CardList = ({ models }) => {
     return (    
         <div className='Card-List'>
-            <p>Done</p>
-            {console.log(models)}
             {
                 models.map( i => {
                     return (
                         <Card
                             key={i}
-                            id={models[i].id}
-                            name={models[i].name}
-                            segment={models[i].segment}
-                            year={models[i].year}
-                            thumbnail={models[i].thumbnail}
-                            photo={models[i].photo}
+                            id={i.id}
+                            name={i.name}
+                            segment={i.segment}
+                            year={i.year}
+                            thumbnail={i.thumbnail}
+                            photo={i.photo}
                         />
                     )
                 })
