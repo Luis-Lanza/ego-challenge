@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import apiCall from './api';
 
 const cars = [];
 
-const data = apiCall('https://challenge.agenciaego.tech/models')
-    .then(response=> console.log(response))
-    .then(response => cars[response])
-    .then(console.log(cars))
+const data = fetch("https://challenge.agenciaego.tech/models", {
+    requireHeader: ["origin", "x-requested-with"]
+  })
+    .then(response => response.json())
+    .then(data => {
+      this.setState({ models: data });
+    });
+}
 
-const Models = () => {
+class Models extends Component {
+    constructor() {
+        super();
+        this.state = {
+            models: [],
+        }
+    }   
+
+    
+
     return (
-        <p>{console.log('mount')}</p>
+        <p>{console.log('data')}</p>
     )
 }
 
