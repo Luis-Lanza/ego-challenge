@@ -4,3 +4,11 @@
     width: auto;
     text-align: center;
 }
+.Text {
+    color: #191919;
+}
+
+.Button {
+    background-color: black;
+    color: white;
+}

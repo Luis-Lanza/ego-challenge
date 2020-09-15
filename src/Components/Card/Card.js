@@ -1,15 +1,17 @@
 import React from 'react';
-import Example from './Example.png';
 
 import './Card.css';
 
-const Card = ({ id, name, year, price }) => {
+const Card = ({ name, year, price, thumbnail }) => {
   return (
     <div className='Card'>
-      <img alt='Example' src={Example}/>
       <h2>{name}</h2>
-      <p>{year}</p>
-      <p>{price}</p>
+      <p className='Text'>{year} | {price}</p>
+      <img 
+        alt={`${name}_photo`} 
+        src={`http://challenge.agenciaego.tech${thumbnail}`}  
+      />
+      <p className='Button'>Ver Modelo</p>
     </div>
   );
 }

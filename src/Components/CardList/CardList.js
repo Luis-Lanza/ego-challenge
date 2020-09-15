@@ -8,16 +8,17 @@ const CardList = ({ models }) => {
     return (    
         <div className='Card-List'>
             {
-                models.map( i => {
+                models.map( (car, i) => {
                     return (
                         <Card
                             key={i}
-                            id={i.id}
-                            name={i.name}
-                            segment={i.segment}
-                            year={i.year}
-                            thumbnail={i.thumbnail}
-                            photo={i.photo}
+                            id={car.id}
+                            name={car.name}
+                            segment={car.segment}
+                            price={car.price}
+                            year={car.year}
+                            thumbnail={car.thumbnail}
+                            photo={car.photo}
                         />
                     )
                 })
