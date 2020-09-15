@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import Navigation from '../Components/Navigation/Navigation';
-import Search from '../Components/Search/Search';
-import CardList from '../Components/CardList/CardList';
+import CarDetails from '../Components/CarDetails/CarDetails';
+// import Navigation from '../Components/Navigation/Navigation';
+// import Search from '../Components/Search/Search';
+// import CardList from '../Components/CardList/CardList';
 // import MainCard from '../Components/MainCard/MainCard';
-import Footer from '../Components/Footer/Footer';
-// import data from '../api/data.js';
+// import Footer from '../Components/Footer/Footer';
 
 import './App.css';
-
-// const models = data;
 
 class App extends Component {
   constructor() {
@@ -33,12 +31,13 @@ class App extends Component {
     const { models } = this.state;
       return (
         <div>
-          <Navigation />
+          <CarDetails models={models} />
+          {/* <Navigation />
           <p className='Text-Style-2'>Descubrí todos los modelos</p>
           <Search />
           <CardList models={models}/>
           <Footer />
-          {/* <MainCard /> */}
+          <MainCard /> */}
         </div>
       )
   }
