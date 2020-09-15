@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Navigation from '../Navigation/Navigation';
 import Description from '../Description/Description';
-// import FeatureNav from '../FeatureNav/FeatureNav';
-import Feature from '../Feature/Feature'
+import FeatureNav from '../FeatureNav/FeatureNav';
+// import Feature from '../Feature/Feature'
 import Highlight from '../Highlight/Highlight';
 
 import './CarDetails.css';
@@ -28,15 +28,15 @@ class CarDetails extends Component {
   
     render() {
         const { model } = this.state;
-        return(
-        <div>
-            <Navigation />
-            <Description model={model}/>
-            <Feature model={model}/>
-            {/* <FeatureNav model={model}/> */}
-            <Highlight model={model}/>
-        </div>
-    )
+        if (model && model.model_features) {
+          return(
+            <div>
+              <Navigation />
+              <Description model={model}/>
+              <FeatureNav model={model}/>
+              <Highlight model={model}/>
+            </div>
+        )}  else return null;
     }   
 }
 
