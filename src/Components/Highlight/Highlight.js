@@ -3,10 +3,20 @@ import React from 'react';
 import './Highlight.css';
 
 
-const Highlight = ({ model }) => {
+const Highlight = ({ title, content, image }) => {
     return(
         <div>
-            <p>I really tried</p>
+            <div>
+                <img 
+                    alt={title}
+                    src={`https://challenge.agenciaego.tech${image}`}
+                />
+            </div>
+            <div>
+                <p className='Text-Style'>{title}</p>
+                <p>{content}</p>
+            </div>
+            
         </div>
     )
 }

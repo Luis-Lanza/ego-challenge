@@ -1,30 +1,10 @@
 import React from 'react';
-import CarDetails from '../CarDetails/CarDetails';
-
-// const CarDetails = () => {
-//   return(
-//       <p>Details</p>
-//   )
-// }
-
+import { Link } from 'react-router-dom';
 import './Card.css';
 
-// class Card extends Component {
-//   constructor(props) {
-//     super(props) {
-//       this.state = {
-//         cClick = false
-//       }
-//     }
-//   }
-// }
 
-const Card = ({ name, year, price, thumbnail }) => {
-  const handleClick = (e) => {
-    e.preventDefault();
-    return(<CarDetails />)
-  }
 
+const Card = ({ name, id, year, price, thumbnail }) => {
   return (
     <div className='Card'>
       <h2>{name}</h2>
@@ -33,7 +13,9 @@ const Card = ({ name, year, price, thumbnail }) => {
         alt={`${name}_photo`} 
         src={`http://challenge.agenciaego.tech${thumbnail}`}  
       />
-      <p className='Button' onClick={handleClick}>Ver Modelo</p>
+      <Link to={`${id}`}>
+        <p className='Button'>Ver Modelo</p>
+      </Link>
     </div>
   );
 }
