@@ -6,6 +6,8 @@ import CardList from '../Components/CardList/CardList';
 import Footer from '../Components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+// import Sidebar from '../Components/Sidebar/Sidebar';
+
 import './App.css';
 
 class App extends Component {
