@@ -17,16 +17,24 @@ class App extends Component {
       models: []
     };
   }
+
+  async getData() {
+    try {
+      const response = await fetch(
+        "https://challenge.agenciaego.tech/models", {
+      requireHeader: ["origin", "x-requested-with"]
+      });
+      const data = await response.json();
+      console.log(data);
+      return this.setState({ models: data })
+    } 
+    catch (err) {
+      console.error(err)
+    }
+  }
   
   componentDidMount() {
-    fetch("https://challenge.agenciaego.tech/models", {
-      requireHeader: ["origin", "x-requested-with"]
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        this.setState({ models: data });
-      });
+    this.getData();
   }
   
   render() {
