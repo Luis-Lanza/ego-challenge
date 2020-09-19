@@ -10,12 +10,13 @@ const Sidebar = ({ width, height, children }) => {
     }, []);
   
     return (
-        <div style={{transition: 'width 1s'}}
+        <div
             className="side-bar" 
             style={{
                 width: width, 
                 minHeight: height,
-                transform:`translateX(${xPosition}px)`
+                transform:`translateX(${xPosition}px)`,
+                transition: `${width} 1s`
             }}
         >
             <>
