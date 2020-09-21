@@ -27,3 +27,11 @@ const Sidebar = ({ width, height, children }) => {
 };
 
 export default Sidebar;
+
+// Menu
+//  Sidebar
+//   Children
+// onClick -> toggleOpen (hook)
+//  openSidebar = () => {render Sidebar}
+// isOpen -> renders Sidebar
+// 
