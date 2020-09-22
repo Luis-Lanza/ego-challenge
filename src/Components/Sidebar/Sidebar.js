@@ -1,23 +1,25 @@
-import React, { useState, useEffect} from "react";
+import React from "react";
 import "./Sidebar.css";
+
+// , { useState, useEffect}
 
 const Sidebar = ({ width, height, children }) => {
     
-    const [xPosition, setX] = useState(width);
+    // const [xPosition, setX] = useState(width);
 
-    useEffect(() => {
-         setX(0);
-    }, []);
+    // useEffect(() => {
+    //      setX(0);
+    // }, []);
   
     return (
         <div
-            className="side-bar" 
-            style={{
-                width: width, 
-                minHeight: height,
-                transform:`translateX(${xPosition}px)`,
-                transition: `${width} 1s`
-            }}
+            className="example" 
+            // style={{
+            //     width: width, 
+            //     minHeight: height,
+            //     transform:`translateX(${xPosition}px)`,
+            //     transition: `${width} 1s`
+            // }}
         >
             <>
                 {children}
@@ -28,7 +30,7 @@ const Sidebar = ({ width, height, children }) => {
 
 export default Sidebar;
 
-// Menu
+// Menu*
 //  Sidebar
 //   Children
 // onClick -> toggleOpen (hook)
