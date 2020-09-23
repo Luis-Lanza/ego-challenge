@@ -1,38 +1,17 @@
 import React from "react";
 import "./Sidebar.css";
 
-// , { useState, useEffect}
+export default function Sidebar() {
 
-const Sidebar = ({ width, height, children }) => {
-    
-    // const [xPosition, setX] = useState(width);
-
-    // useEffect(() => {
-    //      setX(0);
-    // }, []);
-  
     return (
-        <div
-            className="example" 
-            // style={{
-            //     width: width, 
-            //     minHeight: height,
-            //     transform:`translateX(${xPosition}px)`,
-            //     transition: `${width} 1s`
-            // }}
-        >
-            <>
-                {children}
-            </>
+        <div>
+        
         </div>
-    );
-};
+    )
+}
 
-export default Sidebar;
-
-// Menu*
-//  Sidebar
-//   Children
+// Sidebar
+//  Children
 // onClick -> toggleOpen (hook)
 //  openSidebar = () => {render Sidebar}
 // isOpen -> renders Sidebar

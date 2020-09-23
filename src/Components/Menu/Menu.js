@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Hamburguer from './Menu.svg';
+import Sidebar from '../Sidebar/Sidebar';
+
 
 const Menu = () => {
+    
+    const [isOpen, toggleOpen] = useState(false);
+    
     return (
         <div style={{
             display: 'inline-flex',
@@ -10,11 +15,16 @@ const Menu = () => {
             flexDirection:'row',
             textAlign:'center'
           }}>
-            <p>Menu</p>
-            <img 
-                src={Hamburguer}
-                alt='Menu Img'
-            />  
+            <div
+                onClick={() => toggleOpen(isOpen)}
+            >
+                <p>Menu</p>
+                <img 
+                    src={Hamburguer}
+                    alt='Menu Img'
+                />  
+            </div>
+            {isOpen && <Sidebar/>}
         </div>
     );
 }
